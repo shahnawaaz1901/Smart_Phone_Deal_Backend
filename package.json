@@ -1,0 +1,11 @@
+{
+  "name": "smartphone_deal_application_backend",
+  "version": "1.0.0",
+  "description": "A SmartPhone Deal Application Backend",
+  "main": "server.ts",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Shahnawaaz Ansari",
+  "license": "ISC"
+}
