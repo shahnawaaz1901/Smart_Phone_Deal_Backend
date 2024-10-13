@@ -12,19 +12,19 @@ app.use(express.json());
 
 app.use("/", indexRouter);
 
-app.use("/", (req: Request, res: Response, next: NextFunction) => {
+app.use("/", (req: Request, res: Response, next: NextFunction): void => {
   Responses.generateSuccessfulResponse(res, 200, {
     message: "Node.Js with Typescript working !!",
   });
 });
 
-app.use((err: any, req: Request, res: Response, next: NextFunction) => {
+app.use((err: any, req: Request, res: Response, next: NextFunction): void => {
   Responses.generateErrorResponse(res, 500, {
     message: "Internal Server Error",
   });
 });
 
-app.use((req: Request, res: Response, next: NextFunction) => {
+app.use((req: Request, res: Response, next: NextFunction): void => {
   Responses.generateErrorResponse(res, 404, {
     message: "Resource not found !!",
   });
