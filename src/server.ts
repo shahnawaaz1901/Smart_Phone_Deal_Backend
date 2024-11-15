@@ -2,7 +2,7 @@ import "./config/config";
 import connectToDB from "./db/mongoose";
 import app from "./index";
 
-const PORT: number = parseInt(process.env.PORT as string);
+const PORT: number = parseInt(process.env.PORT as string) || 4000;
 
 app.listen(PORT, (err?: any) => {
   if (err) {
