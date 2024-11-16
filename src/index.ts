@@ -1,8 +1,9 @@
 import express, { NextFunction, Request, Response } from "express";
 import cors from "cors";
 import Responses from "./modules/responses";
-import indexRouter from "./features/index.router";
+import indexRouter from "./routes/index.router";
 import ApplicationLevelError from "./modules/application.error";
+import logger from "./middlewares/winston.logger";
 
 const app = express();
 
@@ -10,6 +11,7 @@ app.use(cors({ methods: "*", origin: "*" }));
 
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
+app.use(logger);
 
 app.use("/api", indexRouter);
 

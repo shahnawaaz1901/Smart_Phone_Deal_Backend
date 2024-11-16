@@ -21,6 +21,10 @@ const userSchema = new mongoose.Schema({
     required: true,
   },
   token: { type: String },
+  role: {
+    type: mongoose.Types.ObjectId,
+    ref: "Role",
+  },
 });
 
 const UserModel = mongoose.model("User", userSchema);

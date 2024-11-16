@@ -6,6 +6,7 @@ export default class UserRepository {
     try {
       const newUser = new UserModel(userData);
       await newUser.save();
+      return newUser;
     } catch (error: any) {
       throw error;
     }
